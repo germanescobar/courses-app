@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h1>Nuevo Tema</h1>
+
+      <%= form_for [@subject.course, @subject] do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+
+        <div class="text-right">
+          <%= link_to "Cancel", @subject.course, class: "btn btn-default" %>
+          <%= f.submit class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

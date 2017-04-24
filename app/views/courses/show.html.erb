@@ -4,8 +4,8 @@
       <%= link_to "&larr; Back to courses".html_safe, courses_path %>
       <h1><%= @course.name %></h1>
 
-      <div class="text-right">
-
+      <div class="text-right" style="margin: 30px 0;">
+        <%= link_to "Nuevo Tema", new_course_subject_path(@course), class: "btn btn-primary" %>
       </div>
 
       <div class="panel panel-default">
@@ -13,7 +13,7 @@
           <h3 class="panel-title">Temas</h3>
         </div>
 
-        <div class="table">
+        <table class="table">
           <tbody>
             <% @course.subjects.each do |subject| %>
               <tr>
@@ -21,7 +21,7 @@
               </tr>
             <% end %>
           </tbody>
-        </div>
+        </table>
       </div>
     </div>
   </div>
